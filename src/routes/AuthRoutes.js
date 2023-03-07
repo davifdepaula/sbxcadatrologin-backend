@@ -7,7 +7,7 @@ const authRoutes = express.Router()
 
 authRoutes.post('/', loginValidation, checkLogin, loginController)
 authRoutes.post('/cadastro', checkSignUp, signUpValidate, signUpControler)
-authRoutes.get('/private', tokenValidation, (req, res) => {
+authRoutes.get('/home', tokenValidation, (req, res) => {
   return res.send({msg: 'usuario validado com sucesso'})  
 })
 
